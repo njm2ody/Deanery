@@ -1,0 +1,20 @@
+﻿<Window x:Class="Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="200" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Content="Группы" FontSize="14" Background="LightGray" Grid.Column="0" Grid.Row="0" Margin="5" Click="ShowGroupWindow" FontFamily="Segoe UI" />
+        <Button Content="Студенты" FontSize="14" Background="LightGray" Grid.Column="1" Grid.Row="0" Margin="5" Click="ShowStudentWindow" FontFamily="Segoe UI" />
+        <Button Content="Преподаватели" FontSize="14" Background="LightGray" Grid.Column="0" Grid.Row="1" Margin="5" Click="ShowTeacherWindow" FontFamily="Segoe UI" />
+    </Grid>
+</Window>

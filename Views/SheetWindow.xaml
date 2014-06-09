@@ -1,0 +1,19 @@
+﻿<Window x:Class="Views.SheetWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SheetWindow" Height="300" Width="800">
+    <Grid>
+        <ListView ItemsSource="{Binding Path=Sheets}" Margin="2" Grid.Column="0" Grid.Row="0" SelectedItem="{Binding SelectedSheet}" MouseDoubleClick="ShowSheetListWindow" >
+            <ListView.View>
+                <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Sheet Information" >
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= Id}"    Header="ID" Width="30"/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= Subject.Name}"  Width="100" Header="Дисциплина "/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= Control.Name}"  Header="Форма контроля" Width="240"/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= DateSet}"  Header="Дата выдача" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= DateGet}"  Header="Дата сдачи" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= Teacher.GetFullNameWithInitials}"  Header="Преподаватель" Width="200"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{37BE1BB2-5CBD-46BF-BC76-03E402E8174B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeaneryLibrary", "DeaneryLibrary\DeaneryLibrary.csproj", "{1B1E0A38-774B-466E-8A98-1F188FBCAD31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37BE1BB2-5CBD-46BF-BC76-03E402E8174B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37BE1BB2-5CBD-46BF-BC76-03E402E8174B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37BE1BB2-5CBD-46BF-BC76-03E402E8174B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37BE1BB2-5CBD-46BF-BC76-03E402E8174B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1E0A38-774B-466E-8A98-1F188FBCAD31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1E0A38-774B-466E-8A98-1F188FBCAD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1E0A38-774B-466E-8A98-1F188FBCAD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1E0A38-774B-466E-8A98-1F188FBCAD31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

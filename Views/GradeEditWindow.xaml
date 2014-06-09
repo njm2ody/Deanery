@@ -1,0 +1,42 @@
+﻿<Window x:Class="Views.GradeEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GradeEditWindow" Height="200" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Label Content="Студент: " Margin="5" Grid.Column="0" Grid.Row="0"></Label>
+        <ComboBox Grid.Column="1" Grid.Row="0" Margin="5" Grid.ColumnSpan="3">
+            <ComboBoxItem>И.Е. Ерохин</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Тип оценки: " Margin="5" Grid.Column="0" Grid.Row="1"></Label>
+        <ComboBox Grid.Column="1" Grid.Row="1" Margin="5" Grid.ColumnSpan="3">
+            <ComboBoxItem>Неявка</ComboBoxItem>
+            <ComboBoxItem>Экзамен</ComboBoxItem>
+            <ComboBoxItem>Зачет</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Балл: " Margin="5" Grid.Column="0" Grid.Row="2"></Label>
+        <ComboBox Grid.Column="1" Grid.Row="2" Margin="5" Grid.ColumnSpan="3">
+            <ComboBoxItem>0</ComboBoxItem>
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        
+        <Button Content="OK" Grid.Row="3" Grid.Column="2" Margin="5, 10"></Button>
+        <Button Content="Отмена" Grid.Row="3" Grid.Column="3" Margin="5, 10"></Button>
+    </Grid>
+</Window>

@@ -1,0 +1,59 @@
+﻿<Window x:Class="Views.SheetGradeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ведомость" Height="400" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="4" Content="{Binding Sheet.Subject.Name}" FontSize="16" FontWeight="Black" Margin="100, 1" ></Label> 
+
+        <Label Grid.Row="1" Grid.Column="0"  Content="Группа: "></Label>
+        <Label Grid.Row="1" Grid.Column="1" Content="{Binding Sheet.GroupName}" FontSize="12" FontWeight="Black"></Label>
+
+        <Label Grid.Row="3" Grid.Column="0"  Content="Кафедра: "></Label>
+        <Label Grid.Row="3" Grid.Column="1" Content="{Binding Sheet.Teacher.ChairName}" FontSize="12" FontWeight="Black"></Label>
+
+        <Label Grid.Row="2" Grid.Column="0"  Content="Преподаватель: "></Label>
+        <Label Grid.Row="2" Grid.Column="1"  Content="{Binding Sheet.Teacher.GetFullNameWithInitials}" FontSize="12" FontWeight="Black"></Label>
+
+        <Label Grid.Row="2" Grid.Column="2"  Content="Количество часов: "></Label>
+        <Label Grid.Row="2" Grid.Column="3"  Content="{Binding Sheet.Subject.CountOfHours}" FontSize="12" FontWeight="Black"></Label>
+
+        <Label Grid.Row="1" Grid.Column="2"  Content="Курс: "></Label>
+        <Label Grid.Row="1" Grid.Column="3"  Content="{Binding Sheet.Subject.Course}" FontSize="12" FontWeight="Black"></Label>
+        
+        <Label Grid.Row="3" Grid.Column="2"  Content="Семестр: "></Label>
+        <Label Grid.Row="3" Grid.Column="3"  Content="{Binding Sheet.Subject.Semester}" FontSize="12" FontWeight="Black"></Label>
+
+        <ListView ItemsSource="{Binding Path=Grades}" Margin="2" Grid.ColumnSpan="4" Grid.Row="4"  >
+
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Редактировать"    Click="ShowGradeEditWindow" ></MenuItem>
+                    <MenuItem Header="Добавить"         Click="ShowGradeInsertWindow"></MenuItem>
+                    <MenuItem Header="Удалить"          Click="DeleteGrade"></MenuItem>
+                </ContextMenu>
+            </ListView.ContextMenu>
+
+            <ListView.View>
+                <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Sheet Information" >
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= Id}"    Header="ID" Width="30"/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= Student.GetFullNameWithInitials}"  Width="350" Header="Студент "/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= Name}"  Header="Тип оценки" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= Value}"  Header="Балл" Width="50"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

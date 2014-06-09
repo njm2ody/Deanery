@@ -1,0 +1,31 @@
+﻿<Window x:Class="Views.StudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="StudentWindow" Height="300" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListView ItemsSource="{Binding Path=Students}" Margin="2" Grid.Column="0" Grid.Row="0" SelectedItem="{Binding SelectedStudent}" MouseDoubleClick="ShowStudentEditWindow">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Редактировать" Click="ShowStudentEditWindow"></MenuItem>
+                    <MenuItem Header="Добавить" Click="ShowStudentInsertWindow"></MenuItem>
+                    <MenuItem Header="Удалить" Click="MenuItem_Click_Delete"></MenuItem>
+                </ContextMenu>
+            </ListView.ContextMenu>
+            <ListView.View>
+                <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Students Information" >
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= Id}"    Header="ID" Width="30"/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= LastName}"  Header="Фамилия" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= FirstName}"  Width="135" Header="Имя"/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= MiddleName}"  Header="Отчество" Width="135"/>
+                    <GridViewColumn DisplayMemberBinding = "{Binding Path= GroupName}"  Header="Группа" Width="131"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
